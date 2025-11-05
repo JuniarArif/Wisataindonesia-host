@@ -3,19 +3,19 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%); /* Gradiasi biru-ungu halus */
+    /* Gradiasi yang lebih elegan */
+    background: linear-gradient(135deg, #f4f7f6 0%, #eef0f4 100%); 
     color: #333;
     line-height: 1.6;
-    transition: background 0.3s ease; /* Transisi halus */
 }
 
-/* Header dengan gradien */
+/* Header dengan desain modern */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradiasi ungu-biru */
+    background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%); /* Gradien biru laut */
     color: white;
     text-align: center;
     padding: 30px 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3); /* Shadow yang sesuai */
     position: relative;
 }
 
@@ -23,122 +23,152 @@ header h1 {
     margin: 0;
     font-size: 2.5em;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 header p {
     margin: 10px 0 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
     opacity: 0.9;
+}
+
+/* Tombol Kembali ke Home (Pembaruan UI) */
+.back-home-btn {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.back-home-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateX(-3px);
+}
+
+.back-home-btn i {
+    margin-right: 6px;
 }
 
 /* Main container */
 main {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-/* Search-Filter Bar dengan desain modern */
+/* Search-Filter Bar */
 #search-filter {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 30px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    backdrop-filter: blur(10px); /* Efek blur untuk modernitas */
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Shadow lebih halus */
     align-items: center;
 }
 
 #search-filter input, #search-filter select, #search-filter button {
     padding: 12px 15px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     font-size: 1em;
     transition: all 0.3s ease;
-    background: white;
+    background: #fff;
+    flex-grow: 1; /* Agar filter merata */
+    min-width: 150px;
 }
 
 #search-filter input:focus, #search-filter select:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
     outline: none;
 }
 
 #search-filter button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
     color: white;
     border: none;
     cursor: pointer;
     font-weight: 600;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 119, 182, 0.3);
 }
 
 #search-filter button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 15px rgba(0, 119, 182, 0.4);
 }
 
 /* Wisata List dan Rekomendasi */
 #wisata-list, #rekomendasi-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 20px;
 }
 
 .wisata-item {
     background: white;
-    border: none;
     border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .wisata-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .wisata-item img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
+}
+
+.wisata-content {
+    padding: 20px;
 }
 
 .wisata-item h3 {
     margin: 0 0 10px;
-    font-size: 1.4em;
-    color: #333;
+    font-size: 1.5em;
+    color: #0077b6;
 }
 
 .wisata-item p {
     margin: 5px 0;
-    color: #666;
+    color: #555;
+    font-size: 0.95em;
 }
 
 .wisata-item a {
-    display: inline-block;
+    display: block; /* Mengganti inline-block agar menuhin lebar */
+    text-align: center;
     margin-top: 15px;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8c00 100%); /* Aksen kontras */
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 600;
-    transition: background 0.3s ease;
 }
 
 .wisata-item a:hover {
-    background: linear-gradient(135deg, #ff5252 0%, #ff8c00 100%);
+    background: linear-gradient(135deg, #ff5252 0%, #ff7b00 100%);
 }
 
 /* Halaman Detail Wisata */
@@ -151,95 +181,72 @@ main {
 
 #gambar-wisata img {
     width: 100%;
-    height: 150px;
+    height: 180px;
     object-fit: cover;
     border-radius: 10px;
+    cursor: pointer; /* Menandakan zoom */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
 #gambar-wisata img:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
-#deskripsi {
+#deskripsi, #info-lain, #tambah-ulasan {
     margin-bottom: 30px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+#info-lain h2, #info-lain h3 {
+    color: #0077b6;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#info-lain p i {
+    color: #00b4d8;
+    margin-right: 8px;
 }
 
 #toggle-deskripsi {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #00b4d8;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-    transition: all 0.3s ease;
     margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 #toggle-deskripsi:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: #009db8;
 }
 
-#info-lain {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-#info-lain p {
-    margin: 10px 0;
-}
-
-#info-lain a {
-    color: #667eea;
-    text-decoration: none;
+/* Form Ulasan */
+#tambah-ulasan label {
+    display: block;
+    margin: 15px 0 5px;
     font-weight: 600;
-}
-
-#info-lain a:hover {
-    text-decoration: underline;
-}
-
-#ulasan-list {
-    margin-top: 20px;
-}
-
-.ulasan-item {
-    border-bottom: 1px solid #eee;
-    padding: 15px 0;
-    background: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-#tambah-ulasan {
-    margin-top: 30px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #333;
 }
 
 #tambah-ulasan input, #tambah-ulasan textarea {
     width: 100%;
     padding: 12px;
     margin: 8px 0;
-    border: 2px solid #ddd;
+    border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1em;
-    transition: border-color 0.3s ease;
-}
-
-#tambah-ulasan input:focus, #tambah-ulasan textarea:focus {
-    border-color: #667eea;
-    outline: none;
+    box-sizing: border-box;
 }
 
 #tambah-ulasan button {
@@ -251,46 +258,30 @@ main {
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 #tambah-ulasan button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
 }
 
-/* Responsivitas */
-@media (max-width: 768px) {
-    #search-filter {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .wisata-item {
-        width: 100%;
-    }
-    header h1 {
-        font-size: 2em;
-    }
+/* Ulasan Item */
+.ulasan-item {
+    border-left: 5px solid #00b4d8;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
 }
 
-/* Hal Khusus untuk Wisata ID 1: Gradiasi Pink-Putih dan Warna Pink */
-.special-wisata {
-    background: linear-gradient(135deg, #ffcccc 0%, #ffffff 100%); /* Gradiasi pink-putih */
-    color: #d81b60; /* Warna teks pink gelap */
+.ulasan-item strong {
+    color: #0077b6;
 }
 
-.special-wisata header {
-    background: linear-gradient(135deg, #00bfff 0%, #9966cb 50%,#ffc6ca 100%); /* Gradiasi pink untuk header */
-}
-
-.special-wisata .wisata-item a, .special-wisata #toggle-deskripsi, .special-wisata #tambah-ulasan button {
-    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%); /* Aksen pink */
-}
-
-.special-wisata #info-lain a {
-    color: #ff1493;
-}
-
-/* Star Rating Styling - Telah Diperbaiki */
+/* --- Star Rating Styling (FIXED) --- */
 #star-rating {
     display: flex;
     gap: 5px;
@@ -299,39 +290,78 @@ main {
 
 .star {
     font-size: 2em;
-    color: #ddd;
+    color: #ddd; /* Default: Abu-abu */
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
-/* 1. Aturan untuk bintang aktif (yang sudah diklik) */
 .star.active {
-    color: #ffd700; /* Warna emas untuk bintang aktif */
+    color: #ffc107; /* Warna emas untuk bintang aktif */
 }
 
-/* 2. Aturan saat mouse diarahkan (hover) */
-/* Pastikan bintang saat ini dan bintang sebelumnya menyala saat hover */
-.star:hover,
-.star:hover ~ .star.active, /* Pertahankan warna aktif jika ada */
-.star:hover ~ .star {
-    color: #ddd; /* Kembalikan warna abu-abu untuk bintang setelahnya */
+.star:hover {
+    color: #ffc107; 
 }
 
-/* Ini adalah trik yang penting: pastikan semua bintang SEBELUM bintang yang di-hover menyala */
-.star:hover,
-.star:hover ~ .star { /* Reset semua bintang saat hover */
-    color: #ddd;
+/* --- Modal (Zoom Gambar) --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
 }
-.star:hover,
-.star:hover ~ .star.active { /* Pastikan bintang yang aktif sebelum hover tetap aktif */
-    color: #ffd700;
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
 }
-/* Kunci utama: Saat di hover, bintang itu sendiri dan SEMUA bintang PRECEDINGnya harus berwarna emas */
-.star:hover,
-#star-rating:hover .star:hover ~ .star {
-    /* Aturan yang lebih ringkas */
+
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
 }
-.star.active {
-    color: #ffd700;
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
 }
-/* Menghilangkan aturan bermasalah dan mengandalkan JavaScript untuk class 'active' */
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #00b4d8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    #search-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .back-home-btn {
+        position: static;
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+    header {
+        padding-top: 80px;
+    }
+}
