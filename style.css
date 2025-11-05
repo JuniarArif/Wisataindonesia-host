@@ -299,15 +299,23 @@ main {
 
 .star {
     font-size: 2em;
-    color: #ddd;
+    color: #ddd; /* Default: Abu-abu */
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
-.star:hover, .star.active {
-    color: #ffd700; /* Warna emas untuk bintang aktif/hover */
+/* Bintang yang memiliki class 'active' akan berwarna emas */
+.star.active {
+    color: #ffd700; 
 }
 
-.star.active ~ .star {
-    color: #ddd; /* Bintang setelah yang aktif tetap abu */
+/* Saat mouse di atasnya (Hover), beri warna emas. 
+   Ini hanya untuk efek visual, tidak mengubah class 'active' */
+.star:hover {
+    color: #ffd700; 
+}
+
+/* Opsional: Efek hover pada bintang sebelum yang di-hover */
+.star:hover ~ .star {
+    color: #ddd; /* Pastikan bintang setelah yang di-hover tetap abu-abu */
 }
