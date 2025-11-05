@@ -365,3 +365,22 @@ main {
         padding-top: 80px;
     }
 }
+
+
+/* Hal Khusus untuk Wisata ID 1: Gradiasi Pink-Putih dan Warna Pink */
+.special-wisata {
+    background: linear-gradient(135deg, #ffcccc 0%, #ffffff 100%); /* Gradiasi pink-putih */
+    color: #d81b60; /* Warna teks pink gelap */
+}
+
+.special-wisata header {
+    background: linear-gradient(135deg, #00bfff 0%, #9966cb 50%,#ffc6ca 100%); /* Gradiasi pink untuk header */
+}
+
+.special-wisata .wisata-item a, .special-wisata #toggle-deskripsi, .special-wisata #tambah-ulasan button {
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%); /* Aksen pink */
+}
+
+.special-wisata #info-lain a {
+    color: #ff1493;
+}
